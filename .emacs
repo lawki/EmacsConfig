@@ -1,12 +1,12 @@
 (setq url-proxy-services
 	  	   '(("no_proxy" . "^\\(localhost\\|10.*\\)")
-			    ("http" . "172.31.100.27:3128")
-				  ("https" . "172.31.100.27:3128")))
+			    ("http" . "proxy1:port1")
+				  ("https" . "proxy1:port1")))
 
 (setq url-http-proxy-basic-auth-storage
-	  	      (list (list "172.31.100.27:3128"
+	  	      (list (list "proxy1:port1"
 	  	        (cons "Input your LDAP UID !"
-					 (base64-encode-string "edcguest:edcguest")))))
+					 (base64-encode-string "username:password")))))
 
 ; start package.el with emacs
 ;(require 'package)
